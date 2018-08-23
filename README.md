@@ -1,9 +1,10 @@
 # UltraVision [ウルトラビジョン]
 
+インストール　[はじめ方]
 
-cd your_www_projects
+1. cd your_www_projects
 
-git clone https://github.com/JFLABO/UltraVision.git
+2. git clone https://github.com/JFLABO/UltraVision.git
 
 ここから自分好みにカスタムしてください
 
