@@ -31,6 +31,7 @@
 		var data;
     var sw=1;
 		var group = new THREE.Group();
+	  var group2 = new THREE.Group();
 		(function (handleload) {
 			var xhr = new XMLHttpRequest;
 			xhr.addEventListener('load', handleload, false);
@@ -67,17 +68,27 @@
 			function init() {
 				var container = document.getElementById( 'container' );
 				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 5000 );
-				camera.position.set( 1000, 350, 1000 );
+				camera.position.set( 1000, 350, 0 );
 				scene = new THREE.Scene();
 				renderer = new THREE.CSS3DRenderer();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
 
-				group.add( new Element( "00", 0, 0, 240, 0 ) );
-		    group.add( new Element( "01", 240, 0, 0, Math.PI / 2 ) );
-		    group.add( new Element( "02", 0, 0, - 240, Math.PI ) );
-		    group.add( new Element( "03", - 240, 0, 0, - Math.PI / 2 ) );
+				group.add( new Element( "04", 0, 0, 240, 0 ) );
+		    group.add( new Element( "05", 240, 0, 0, Math.PI / 2 ) );
+		    group.add( new Element( "06", 0, 0, - 240, Math.PI ) );
+		    group.add( new Element( "07", - 240, 0, 0, - Math.PI / 2 ) );
+        group.position.set(0,0,0);
 		    scene.add( group );
+
+        group2.add( new Element( "00", 0, 700, -500, Math.PI / 2  ) );
+		    group2.add( new Element( "01", 0, 700, 0, Math.PI / 2 ) );
+		    group2.add( new Element( "02", 0, 700, 500, Math.PI / 2  ) );
+		    group2.add( new Element( "03", 0, 700, 1000, Math.PI / 2  ) );
+        group2.scale.set(0.5,0.5,0.5);
+        group2.position.set(0,0,-100);
+  		  scene.add( group2 );
+
 				controls = new THREE.TrackballControls( camera );
 				controls.rotateSpeed = 4;
 				window.addEventListener( 'resize', onWindowResize, false );
