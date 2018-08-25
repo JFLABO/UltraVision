@@ -14,3 +14,9 @@
  見せたいＹｏｕＴｕｂｅチャンネルにつながります。
  
 ※改変自由
+
+Twitter Vision
+
+　 UltraVision/vlabo2/examples/twdata.jsonの中を書き換えると
+  
+  任意のtwitterアカウントを一度に見ることができます。
