@@ -56,7 +56,7 @@
 				iframe.style.height = '360px';
 				iframe.style.border = '0px';
 				//iframe.src = [ 'https://www.youtube.com/embed/', id, '?rel=0' ].join( '' );
-        iframe.src='http://jflabo.org/~rosh/vlabo2/examples/aaa.php?id='+id;
+                iframe.src='http://jflabo.org/~rosh/vlabo2/examples/aaa.php?id='+id;
 				div.appendChild( iframe );
 				var object = new THREE.CSS3DObject( div );
 				object.position.set( x, y, z );
@@ -74,10 +74,10 @@
 				container.appendChild( renderer.domElement );
 
 				group.add( new Element( data["VIDEOCODE0"], 0, 0, 240, 0 ) );
-		    group.add( new Element( data["VIDEOCODE1"], 240, 0, 0, Math.PI / 2 ) );
-		    group.add( new Element( data["VIDEOCODE2"], 0, 0, - 240, Math.PI ) );
-		    group.add( new Element( data["VIDEOCODE3"], - 240, 0, 0, - Math.PI / 2 ) );
-		    scene.add( group );
+                group.add( new Element( data["VIDEOCODE1"], 240, 0, 0, Math.PI / 2 ) );
+                group.add( new Element( data["VIDEOCODE2"], 0, 0, - 240, Math.PI ) );
+                group.add( new Element( data["VIDEOCODE3"], - 240, 0, 0, - Math.PI / 2 ) );
+                scene.add( group );
 				controls = new THREE.TrackballControls( camera );
 				controls.rotateSpeed = 4;
 				window.addEventListener( 'resize', onWindowResize, false );
