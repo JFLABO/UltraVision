@@ -29,14 +29,14 @@
 
 		<script>
 		var data;
-    var sw=0;
+		var sw=0;
 		var group = new THREE.Group();
-	  var group2 = new THREE.Group();
-	  var group3 = new THREE.Group();
+	        var group2 = new THREE.Group();
+	        var group3 = new THREE.Group();
 		(function (handleload) {
 			var xhr = new XMLHttpRequest;
 			xhr.addEventListener('load', handleload, false);
-			xhr.open('GET', './twdata.json', true);
+			xhr.open('GET', './twdata201907.json', true);
 			xhr.send(null);
 		}(function handleLoad (event) {
 			var xhr = event.target;
